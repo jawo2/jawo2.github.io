@@ -47,6 +47,22 @@ body {
 
 .nav-links a:hover { opacity: 1; }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icon-link {
+  display: flex;
+  align-items: center;
+  color: var(--text);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.nav-icon-link:hover { opacity: 1; }
+
 .nav-cta {
   text-decoration: none;
   color: var(--text);
@@ -123,7 +139,7 @@ body {
 
 /* ── Projects Section ────────────────────────────────────────── */
 .projects-section {
-  padding: 80px 12% 120px;
+  padding: 80px 12% 80px;
 }
 
 .section-title {
@@ -158,7 +174,7 @@ body {
   box-shadow: 0 4px 28px rgba(0,0,0,0.07);
   display: flex;
   overflow: hidden;
-  min-height: 520px;
+  min-height: 620px;
 }
 
 .card-wrapper:nth-child(1) .project-card { z-index: 1; }
@@ -176,21 +192,21 @@ body {
 }
 
 .project-name {
-  font-size: clamp(22px, 2.4vw, 30px);
+  font-size: clamp(25.5px, 2.4vw, 30px);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
 
 .project-desc {
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.75;
   color: var(--text-muted);
   text-align: justify;
 }
 
 .project-goal {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--text-muted);
   text-align: justify;
@@ -200,7 +216,7 @@ body {
 
 .goal-label {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text);
@@ -219,7 +235,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--text-muted);
   background: rgba(26,26,24,0.07);
@@ -241,7 +257,7 @@ body {
 .project-link {
   text-decoration: none;
   color: var(--text);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   margin-top: 6px;
   display: inline-flex;
@@ -294,7 +310,7 @@ body {
 
 .carousel-slide img {
   max-width: 100%;
-  max-height: 440px;
+  max-height: 600px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -326,6 +342,42 @@ body {
 }
 
 .cta-btn:hover { opacity: 0.82; }
+
+/* ── Reviews Section ─────────────────────────────────────────── */
+.reviews-section {
+  padding: 80px 12% 120px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid rgba(26,26,24,0.08);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.07);
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.review-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
 
 /* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -364,4 +416,7 @@ body {
   }
 
   .project-info { padding: 32px 24px; }
+
+  .reviews-section { padding: 60px 16px 80px; }
+  .reviews-grid { grid-template-columns: 1fr; }
 }

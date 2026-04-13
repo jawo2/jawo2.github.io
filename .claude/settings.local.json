@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m http.server 8080)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/jwongp/portfolio/assets/images/*.png /Users/jwongp/portfolio/assets/images/*.jpeg)",
+      "Bash(sips --resampleHeight 1200 /Users/jwongp/portfolio/assets/images/DM1.png)",
+      "Bash(sips --resampleHeight 1200 /Users/jwongp/portfolio/assets/images/DM2.png)",
+      "Bash(sips --resampleHeight 1200 /Users/jwongp/portfolio/assets/images/DM3.png)",
+      "Bash(sips --resampleWidth 900 /Users/jwongp/portfolio/assets/images/DeskApp.png)",
+      "Bash(sips --resampleWidth 1050 /Users/jwongp/portfolio/assets/images/JaimesRecs.png)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git stash:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight assets/images/DM1.png assets/images/JaimesRecs.png assets/images/CT1.png assets/images/DeskApp.png)"
+    ]
+  }
+}
