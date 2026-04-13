@@ -294,7 +294,7 @@ body {
 
 .carousel-slide img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 440px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -302,9 +302,9 @@ body {
   border-radius: 12px;
 }
 
-/* ── Left-align: cards 1 & 4 (portrait/square, same size, left anchor) */
+/* ── Shift-left: cards 2 & 3 — same total padding (48px), redistributed */
 .media--left .carousel-slide {
-  justify-content: flex-start;
+  padding: 24px 40px 24px 8px;
 }
 
 /* ── Projects CTA ─────────────────────────────────────────────── */
