@@ -81,7 +81,7 @@ body {
 
 /* ── Hero wrapper ────────────────────────────────────────────── */
 .hero-wrapper {
-  padding: 24px 48px 80px;
+  padding: 24px 48px 0;
 }
 
 .hero-card {
@@ -156,7 +156,7 @@ body {
 
 /* ── Projects Section ────────────────────────────────────────── */
 .projects-section {
-  padding: 80px 12% 80px;
+  padding: 64px 12% 0;
 }
 
 .section-title {
@@ -165,26 +165,26 @@ body {
   text-align: center;
   letter-spacing: -0.02em;
   margin-bottom: 64px;
+  position: sticky;
+  top: 58px;
+  z-index: 10;
+  background: var(--bg);
+  padding: 16px 0;
 }
 
 .projects-stack {
   position: relative;
+  padding-bottom: 0;
 }
 
-/* ── Card wrapper (creates scroll distance per card) ──────────── */
-.card-wrapper {
-  height: 960px;
+/* ── Card spacer (creates scroll distance between sticky cards) ── */
+.card-spacer {
+  height: 400px;
 }
 
-.card-wrapper:last-child {
-  height: auto;
-  padding-bottom: 80px;
-}
-
-/* ── Project card ─────────────────────────────────────────────── */
 .project-card {
   position: sticky;
-  top: 80px;
+  top: 140px;
   background: var(--card-bg);
   border-radius: var(--radius);
   border: 1px solid rgba(26,26,24,0.08);
@@ -194,10 +194,10 @@ body {
   min-height: 620px;
 }
 
-.card-wrapper:nth-child(1) .project-card { z-index: 1; }
-.card-wrapper:nth-child(2) .project-card { z-index: 2; }
-.card-wrapper:nth-child(3) .project-card { z-index: 3; }
-.card-wrapper:nth-child(4) .project-card { z-index: 4; }
+article.project-card:nth-of-type(1) { z-index: 1; }
+article.project-card:nth-of-type(2) { z-index: 2; }
+article.project-card:nth-of-type(3) { z-index: 3; }
+article.project-card:nth-of-type(4) { z-index: 4; }
 
 /* ── Project info (left — 55%) ────────────────────────────────── */
 .project-info {
@@ -485,7 +485,7 @@ body {
 
 /* ── Reviews Section ─────────────────────────────────────────── */
 .reviews-section {
-  padding: 80px 12% 120px;
+  padding: 80px 12% 32px;
 }
 
 .reviews-grid {
@@ -766,18 +766,16 @@ body {
 
   .projects-section { padding: 60px 16px 80px; }
 
-  .card-wrapper {
-    height: auto !important;
-    margin-bottom: 20px;
-  }
+  .card-spacer { display: none; }
 
-  .card-wrapper:last-child { padding-bottom: 0; }
+  .projects-stack { padding-bottom: 40px; }
 
   .project-card {
     position: relative !important;
     top: auto !important;
     flex-direction: column;
     height: auto !important;
+    margin-bottom: 20px;
   }
 
   .project-media {
