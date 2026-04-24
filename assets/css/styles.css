@@ -37,6 +37,16 @@ body {
   gap: 36px;
 }
 
+.nav-logo {
+  color: var(--text-on-dark);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  padding-right: 16px;
+  border-right: 1.5px solid rgba(255,255,255,0.2);
+  margin-right: 8px;
+}
+
 .nav-links a {
   text-decoration: none;
   color: var(--text-on-dark);
@@ -62,14 +72,38 @@ body {
   transition: opacity 0.2s;
 }
 
+.nav-icon-link svg {
+  width: 22px;
+  height: 22px;
+}
+
 .nav-icon-link:hover { opacity: 1; }
+
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: var(--text-on-dark);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 999px;
+  padding: 8px 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-resume:hover {
+  background: var(--text-on-dark);
+  color: var(--bg);
+}
 
 .nav-cta {
   text-decoration: none;
   color: var(--text-on-dark);
   font-size: 14px;
   font-weight: 500;
-  border: 1.5px solid var(--text-on-dark);
+  border: 1.5px solid rgba(255,255,255,0.4);
   border-radius: 999px;
   padding: 8px 20px;
   transition: background 0.2s, color 0.2s;
