@@ -285,23 +285,12 @@ article.project-card:nth-of-type(4) { z-index: 4; }
 .tag {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
   font-size: 16px;
   font-weight: 500;
-  color: var(--text-muted);
-  background: rgba(255,255,255,0.12);
+  color: var(--text);
+  background: var(--dot, #888);
   border-radius: 999px;
   padding: 5px 12px;
-}
-
-.tag::before {
-  content: '';
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--dot, #888);
-  flex-shrink: 0;
 }
 
 /* ── View project link ────────────────────────────────────────── */
@@ -529,7 +518,13 @@ article.project-card:nth-of-type(4) { z-index: 4; }
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: transform 0.25s ease;
 }
+
+.review-card:hover {
+  transform: scale(1.018);
+}
+
 
 .review-text {
   font-size: 15px;
