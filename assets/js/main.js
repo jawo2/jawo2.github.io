@@ -212,9 +212,25 @@ function initCollabModal() {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 }
 
+// ── Scroll hint visibility ─────────────────────────────────────
+function initScrollHint() {
+  const hint   = document.getElementById('scroll-hint');
+  const spacer = document.getElementById('last-spacer');
+  if (!hint || !spacer) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      hint.classList.toggle('visible', entry.isIntersecting);
+    });
+  }, { threshold: 0 });
+
+  observer.observe(spacer);
+}
+
 equalizeCardHeights();
 initCarousels();
 initDiscoveryModal();
 initCollabModal();
+initScrollHint();
 
 window.addEventListener('resize', equalizeCardHeights);
