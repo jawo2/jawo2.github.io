@@ -1,3 +1,27 @@
+// ── Prevent scroll restoration on reload ──────────────────────
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+document.addEventListener('DOMContentLoaded', () => window.scrollTo(0, 0));
+window.addEventListener('load', () => window.scrollTo(0, 0));
+window.addEventListener('pageshow', () => window.scrollTo(0, 0));
+
+// ── Home nav link: always scroll to very top ───────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const homeLink = document.querySelector('a[href="#hero"]');
+  if (homeLink) homeLink.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// ── Size hero to remaining viewport height ─────────────────────
+function setHeroHeight() {
+  const nav  = document.querySelector('.nav');
+  const hero = document.querySelector('.hero-wrapper');
+  if (nav && hero) hero.style.height = (window.innerHeight - nav.offsetHeight) + 'px';
+}
+setHeroHeight();
+window.addEventListener('resize', setHeroHeight);
+
 // ── Equalize card heights ──────────────────────────────────────
 function equalizeCardHeights() {
   const cards = document.querySelectorAll('.project-card');

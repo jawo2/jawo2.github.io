@@ -82,7 +82,9 @@ body {
 
 /* ── Hero wrapper ────────────────────────────────────────────── */
 .hero-wrapper {
-  padding: 24px 48px 0;
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-card {
@@ -91,8 +93,10 @@ body {
   display: flex;
   align-items: center;
   gap: 48px;
-  padding: 72px 80px 72px 80px;
-  min-height: 600px;
+  padding: 72px 80px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* ── Hero text ───────────────────────────────────────────────── */
@@ -158,14 +162,16 @@ body {
 .hero-photo-wrap {
   flex: 0 0 auto;
   width: min(38%, 460px);
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
 .hero-photo {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 16px;
   display: block;
 }
 
