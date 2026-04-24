@@ -39,18 +39,38 @@ function initCarousels() {
     const slides = track.querySelectorAll('.carousel-slide');
     if (slides.length <= 1) return;
 
-    let current = 0;
+    // Clone first slide so the last→first transition plays forward seamlessly
+    track.appendChild(slides[0].cloneNode(true));
 
-    // Pause on hover
+    let current = 0;
+    let transitioning = false;
+
+    function goTo(index, animate) {
+      track.style.transition = animate
+        ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+        : 'none';
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // After landing on the clone, snap silently back to the real first slide
+    track.addEventListener('transitionend', () => {
+      if (current === slides.length) {
+        current = 0;
+        goTo(0, false);
+      }
+      transitioning = false;
+    });
+
     let paused = false;
     carousel.addEventListener('mouseenter', () => { paused = true; });
     carousel.addEventListener('mouseleave', () => { paused = false; });
 
     setInterval(() => {
-      if (paused) return;
-      current = (current + 1) % slides.length;
-      track.style.transform = `translateX(-${current * 100}%)`;
-    }, 3500);
+      if (paused || transitioning) return;
+      transitioning = true;
+      current += 1;
+      goTo(current, true);
+    }, 2200);
   });
 }
 
