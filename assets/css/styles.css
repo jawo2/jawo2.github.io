@@ -124,6 +124,8 @@ body {
 .hero-card {
   background: var(--card-bg);
   border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   gap: 48px;
@@ -176,6 +178,15 @@ body {
   background: rgba(255,255,255,0.12);
   border-radius: 999px;
   padding: 5px 12px;
+}
+
+.hero-badge--link {
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.hero-badge--link:hover {
+  background: rgba(255,255,255,0.22);
 }
 
 .hero-divider {
