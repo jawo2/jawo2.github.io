@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function setHeroHeight() {
   const nav  = document.querySelector('.nav');
   const hero = document.querySelector('.hero-wrapper');
-  if (nav && hero) hero.style.height = (window.innerHeight - nav.offsetHeight) + 'px';
+  if (nav && hero) hero.style.height = (window.innerHeight - nav.offsetHeight - 64) + 'px';
 }
 setHeroHeight();
 window.addEventListener('resize', setHeroHeight);
