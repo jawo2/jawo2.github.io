@@ -557,6 +557,11 @@ article.project-card:nth-of-type(6) { z-index: 6; }
   padding: 24px 40px 24px 8px;
 }
 
+/* ── Inset: centers image between text column and right card edge */
+.media--inset .carousel-slide {
+  padding: 24px 60px 24px 16px;
+}
+
 /* ── Projects CTA ─────────────────────────────────────────────── */
 .projects-cta {
   text-align: center;

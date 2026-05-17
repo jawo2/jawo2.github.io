@@ -204,8 +204,15 @@ function initCollabModal() {
       { name: 'Riska Ardilla Putri',   url: 'https://www.linkedin.com/in/rska/' },
       { name: 'Octavia Smith',         url: 'https://www.linkedin.com/in/octavia-smith48/' },
     ],
-    no: [],
-    ha: [],
+    no: [
+      { name: 'Delvin Marimo',        url: 'https://www.linkedin.com/in/delvin-marimo-csengins/' },
+      { name: 'James Ning',           url: 'https://www.linkedin.com/in/james-ning/' },
+      { name: 'Monica (Yimiao) Zhao', url: 'https://www.linkedin.com/in/monica-yimiao-zhao-ba5152181/' },
+    ],
+    ha: [
+      { name: 'Stephy Reyes',  url: 'https://www.linkedin.com/in/stephyreyes/' },
+      { name: 'Reuben Luera', url: 'https://www.linkedin.com/in/reuben-luera/' },
+    ],
   };
 
   const linkedInIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.105v1.561h.044c.433-.82 1.49-1.684 3.066-1.684 3.279 0 3.883 2.158 3.883 4.964v6.611zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.554 13.019H3.783V9h3.108v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`;
