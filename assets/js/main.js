@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ── Size hero to remaining viewport height ─────────────────────
 function setHeroHeight() {
+  if (window.innerWidth <= 768) return;
   const nav  = document.querySelector('.nav');
   const hero = document.querySelector('.hero-wrapper');
   if (nav && hero) hero.style.height = (window.innerHeight - nav.offsetHeight - 64) + 'px';
@@ -24,6 +25,7 @@ window.addEventListener('resize', setHeroHeight);
 
 // ── Equalize card heights ──────────────────────────────────────
 function equalizeCardHeights() {
+  if (window.innerWidth <= 768) return;
   const cards = document.querySelectorAll('.project-card');
   // Reset so we can measure natural heights (CSS min-height still applies)
   cards.forEach(c => c.style.height = 'auto');
